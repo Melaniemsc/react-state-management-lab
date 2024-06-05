@@ -118,13 +118,13 @@ const App = () => {
     setAgility(newAgility)
   }
   
-  const handleSearch = (e) => {
+  function handleSearch(e) {
     setSearch(e.target.value);
     const filtered = structuredClone(zombieFighters).filter(
       (fighter) => fighter.name.toLowerCase().includes(e.target.value.toLowerCase())
     );
     setFilteredFighters(filtered);
-  };
+  }
 
   
 
